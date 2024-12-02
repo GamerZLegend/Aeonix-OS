@@ -1,0 +1,8 @@
+{
+  "app_name": "Aeonix App",
+  "version": "1.0.0",
+  "description": "This is the configuration file for the Aeonix App, which provides essential settings and dependencies.",
+  "dependencies": [],
+  "author": "Blackbox AI",
+  "license": "MIT"
+}

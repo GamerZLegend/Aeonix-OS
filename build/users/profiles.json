@@ -1,0 +1,85 @@
+{
+    "version": "2.0.0",
+    "profiles": {
+        "default": {
+            "username": "guest",
+            "role": "guest",
+            "permissions": ["read"],
+            "preferences": {
+                "theme": "default",
+                "language": "en",
+                "notifications": true
+            },
+            "security": {
+                "two_factor_enabled": false,
+                "webauthn_enabled": false,
+                "biometric_enabled": false,
+                "require_2fa_for_sensitive": true
+            }
+        },
+        "admin": {
+            "username": "admin",
+            "role": "administrator",
+            "permissions": ["read", "write", "execute", "admin"],
+            "preferences": {
+                "theme": "dark",
+                "language": "en",
+                "notifications": true
+            },
+            "security": {
+                "two_factor_enabled": true,
+                "webauthn_enabled": true,
+                "biometric_enabled": true,
+                "require_2fa_for_sensitive": true
+            }
+        },
+        "standard": {
+            "username": "user",
+            "role": "user",
+            "permissions": ["read", "write"],
+            "preferences": {
+                "theme": "light",
+                "language": "en",
+                "notifications": true
+            },
+            "security": {
+                "two_factor_enabled": false,
+                "webauthn_enabled": false,
+                "biometric_enabled": false,
+                "require_2fa_for_sensitive": true
+            }
+        }
+    },
+    "roles": {
+        "administrator": {
+            "level": 3,
+            "description": "Full system access with administrative privileges",
+            "permissions": ["read", "write", "execute", "admin"],
+            "security_requirements": {
+                "require_2fa": true,
+                "require_webauthn": true,
+                "min_password_length": 16
+            }
+        },
+        "user": {
+            "level": 2,
+            "description": "Standard user access",
+            "permissions": ["read", "write"],
+            "security_requirements": {
+                "require_2fa": false,
+                "require_webauthn": false,
+                "min_password_length": 12
+            }
+        },
+        "guest": {
+            "level": 1,
+            "description": "Limited read-only access",
+            "permissions": ["read"],
+            "security_requirements": {
+                "require_2fa": false,
+                "require_webauthn": false,
+                "min_password_length": 8
+            }
+        }
+    }
+}

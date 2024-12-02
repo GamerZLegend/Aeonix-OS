@@ -1,0 +1,92 @@
+{
+    "version": "1.0.0",
+    "description": "Filesystem structure for Aeonix OS, detailing directories and key files.",
+    "filesystem": {
+        "root": {
+            "directories": [
+                {
+                    "name": "bin",
+                    "description": "Essential user binaries."
+                },
+                {
+                    "name": "etc",
+                    "description": "Configuration files for the system."
+                },
+                {
+                    "name": "lib",
+                    "description": "Libraries essential for the system and applications."
+                },
+                {
+                    "name": "usr",
+                    "description": "User programs and utilities."
+                },
+                {
+                    "name": "var",
+                    "description": "Variable data files, such as logs and databases."
+                },
+                {
+                    "name": "home",
+                    "description": "User home directories."
+                },
+                {
+                    "name": "boot",
+                    "description": "Boot loader files."
+                },
+                {
+                    "name": "opt",
+                    "description": "Optional application software packages."
+                },
+                {
+                    "name": "srv",
+                    "description": "Data for services provided by the system."
+                },
+                {
+                    "name": "tmp",
+                    "description": "Temporary files."
+                },
+                {
+                    "name": "media",
+                    "description": "Mount points for removable media."
+                },
+                {
+                    "name": "mnt",
+                    "description": "Mount points for temporarily mounted filesystems."
+                }
+            ],
+            "files": {
+                "etc": [
+                    {
+                        "name": "fstab",
+                        "description": "Static information about the filesystems."
+                    },
+                    {
+                        "name": "hosts",
+                        "description": "Static table lookup for hostnames."
+                    },
+                    {
+                        "name": "passwd",
+                        "description": "User account information."
+                    },
+                    {
+                        "name": "shadow",
+                        "description": "Secure user account information."
+                    },
+                    {
+                        "name": "network/interfaces",
+                        "description": "Network interface configuration."
+                    }
+                ],
+                "init": [
+                    {
+                        "name": "init",
+                        "description": "Initialization program for the system."
+                    },
+                    {
+                        "name": "initrd.img",
+                        "description": "Initial RAM disk image."
+                    }
+                ]
+            }
+        }
+    }
+}

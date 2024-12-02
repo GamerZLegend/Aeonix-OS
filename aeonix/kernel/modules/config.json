@@ -1,0 +1,37 @@
+{
+    "version": "1.0.0",
+    "modules": {
+        "networking": [
+            "nf_conntrack",
+            "nf_nat",
+            "ip_tables",
+            "ip6_tables",
+            "bridge",
+            "veth",
+            "macvlan",
+            "8021q"
+        ],
+        "filesystem": [
+            "ext4",
+            "btrfs",
+            "xfs",
+            "vfat",
+            "ntfs",
+            "nfs",
+            "overlayfs"
+        ],
+        "security": [
+            "apparmor",
+            "selinux",
+            "dm_crypt",
+            "audit"
+        ],
+        "drivers": [
+            "usb_storage",
+            "ahci",
+            "e1000e",
+            "iwlwifi",
+            "nvidia"
+        ]
+    }
+}

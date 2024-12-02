@@ -1,0 +1,99 @@
+{
+  "app_sources": [
+    {
+      "platform": "MacOS",
+      "store_url": "https://developer.apple.com/app-store/",
+      "api_url": "https://developer.apple.com/documentation/appstoreconnectapi",
+      "supported_formats": ["ipa", "app"],
+      "authentication_required": true,
+      "auth_method": "OAuth2",
+      "api_key": "YOUR_APPLE_API_KEY_HERE",
+      "download_directory": "/opt/Aeonix/Downloads/MacOS",
+      "update_check": true,
+      "os_compatibility": ["Aeonix OS", "MacOS"]
+    },
+    {
+      "platform": "Windows",
+      "store_url": "https://developer.microsoft.com/en-us/store/",
+      "api_url": "https://learn.microsoft.com/en-us/windows/uwp/",
+      "supported_formats": ["exe", "msi"],
+      "authentication_required": true,
+      "auth_method": "OAuth2",
+      "api_key": "YOUR_MICROSOFT_API_KEY_HERE",
+      "download_directory": "/opt/Aeonix/Downloads/Windows",
+      "update_check": true,
+      "os_compatibility": ["Aeonix OS", "Windows"]
+    },
+    {
+      "platform": "Archcraft",
+      "store_url": "https://aur.archlinux.org/",
+      "api_url": "https://wiki.archlinux.org/title/Arch_User_Repository",
+      "supported_formats": ["tar.zst", "pkg.tar.xz"],
+      "authentication_required": false,
+      "download_directory": "/opt/Aeonix/Downloads/Archcraft",
+      "update_check": true,
+      "os_compatibility": ["Aeonix OS", "Linux"]
+    },
+    {
+      "platform": "Android",
+      "store_url": "https://play.google.com/console/about/",
+      "api_url": "https://developer.android.com/",
+      "supported_formats": ["apk"],
+      "authentication_required": true,
+      "auth_method": "OAuth2",
+      "api_key": "YOUR_GOOGLE_PLAY_API_KEY_HERE",
+      "download_directory": "/opt/Aeonix/Downloads/Android",
+      "update_check": true,
+      "os_compatibility": ["Aeonix OS", "Android"]
+    },
+    {
+      "platform": "HyperOS",
+      "store_url": "https://developer.mi.com/",
+      "api_url": "https://en.miui.com/",
+      "supported_formats": ["apk"],
+      "authentication_required": true,
+      "auth_method": "OAuth2",
+      "api_key": "YOUR_XIAOMI_API_KEY_HERE",
+      "download_directory": "/opt/Aeonix/Downloads/HyperOS",
+      "update_check": true,
+      "os_compatibility": ["Aeonix OS", "HyperOS"]
+    },
+    {
+      "platform": "OtherAPI",
+      "store_url": "https://example.com/store",
+      "api_url": "https://example.com/api",
+      "supported_formats": ["format1", "format2"],
+      "authentication_required": true,
+      "auth_method": "OAuth2",
+      "api_key": "YOUR_OTHER_API_KEY_HERE",
+      "download_directory": "/opt/Aeonix/Downloads/OtherAPI",
+      "update_check": true,
+      "os_compatibility": ["Aeonix OS"]
+    }
+  ],
+  "settings": {
+    "default_download_path": "/opt/Aeonix/Downloads",
+    "background_processes": true,
+    "log_level": "info",
+    "auto_update_enabled": true,
+    "install_directory": "/opt/AeonixApps",
+    "os_integration": true
+  },
+  "api_integration": {
+    "enabled": true,
+    "api_endpoints": {
+      "check_for_updates": "/api/v1/check_update",
+      "download_app": "/api/v1/download",
+      "authenticate_user": "/api/v1/authenticate"
+    }
+  },
+  "platform_specific_integration": {
+    "Aeonix OS": {
+      "desktop_integration": true,
+      "app_manager": "/opt/Aeonix/AeonixAppManager",
+      "update_system": "Aeonix OS Updater",
+      "gui_support": true,
+      "native_app_support": true
+    }
+  }
+}

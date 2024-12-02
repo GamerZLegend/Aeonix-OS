@@ -1,0 +1,30 @@
+{
+    "version": "1.0.0",
+    "sandbox": {
+        "enabled": true,
+        "isolation_level": "high",
+        "whitelist": [
+            "trusted_app_1",
+            "trusted_app_2"
+        ],
+        "blacklist": [
+            "malicious_app_1",
+            "malicious_app_2"
+        ],
+        "default_policy": {
+            "network_access": "restricted",
+            "file_system_access": "sandboxed",
+            "device_access": "none"
+        },
+        "logging": {
+            "enabled": true,
+            "log_file": "sandbox.log",
+            "log_level": "info"
+        },
+        "resource_limits": {
+            "cpu": "1 core",
+            "memory": "512MB",
+            "disk": "100MB"
+        }
+    }
+}
